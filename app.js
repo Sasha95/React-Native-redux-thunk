@@ -60,10 +60,11 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    fetchData: () => dispatch(fetchData())
-  };
-}
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     fetchData: () => dispatch(fetchData())
+//   };
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, { fetchData })(App);
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
